@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" /> <!-- Teste da extensão Google Fonts -->
+    <style>
+        body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .multa {
+            display: inline;
+            margin-right: 5px;
+        }
+
+        #txtvel {
+            width: 70px;
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DETRAN</h1>
+    <h2>Sistema de Multas</h2>
+    <p class="multa">Velocidade do carro: <input type="number" name="txtvel" id="txtvel">Km/h</p>
+    <input type="button" value="Verificar" id="btn" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('#txtvel')
+            var vel = Number(txtv.value)
+            var res = document.getElementById('res')
+
+            res.innerHTML = `<p>Velocidade informada de <strong>${vel}Km/h</strong></p>`
+
+            if (vel > 60) {
+                res.innerHTML += `<p><strong>MULTADO</strong> por excesso de velocidade</p>`
+            }
+
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+    </script>
+</body>
+</html>
