@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .ver {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>POLÍCIA FEDERAL</h1>
+    <h2>Sistema de Passaportes</h2>
+    <p class="ver">Informe o país de origem: <input type="text" name="txtnac" id="txtnac"></p>
+    <input type="button" value="Verificar" onclick="confirmar()">
+    <div id="res"></div>
+
+    <script>
+        function confirmar() {
+            var txtn = document.querySelector('#txtnac')
+            var nac = txtn.value
+
+            res.innerHTML = `<p>Nacionalidade referente à <strong>${nac}</strong></p>`
+
+            if (nac == 'Brasil' || nac == 'brasil') {
+                res.innerHTML += '<p>Cidadão brasileiro</p>'    
+            } else {
+                res.innerHTML += '<p>Cidadão estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
