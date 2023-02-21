@@ -18,6 +18,12 @@ section {
     box-shadow: 5px 5px 10px #00000066;
 }
 
+div {
+    text-align: center;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
 footer {
     color: #FFF;
     text-align: center;
