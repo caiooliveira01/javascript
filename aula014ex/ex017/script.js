@@ -9,13 +9,13 @@ function tabuada() {
         let n = Number(num.value)
         // var c = 1
         tab.innerHTML = '' // Limpar
-        // while (c <= 10) {
-        //     let item = document.createElement('option') // Criar uma opção dentro do Select
-        //     item.text = `${n} x ${c} = ${n * c}` // Texto dentro do Select
-        //     item.value = `tab${c}`
-        //     tab.appendChild(item) // Resultados
-        //     c++
-        // }
+        /* while (c <= 10) {
+            let item = document.createElement('option') // Criar uma opção dentro do Select
+            item.text = `${n} x ${c} = ${n * c}` // Texto dentro do Select
+            item.value = `tab${c}`
+            tab.appendChild(item) // Resultados
+            c++
+        } */
 
         for (let c = 1; c <= 10; c++) {
             let item = document.createElement('option')
